@@ -8,12 +8,18 @@ function App() {
     <div className="app">
       Trivia!
       <Question question={data[currQuestionNumber].question.text} />
+      <NextQuestion />
     </div>
   );
 }
 
 function Question(props) {
   return <div className="question">{props.question}</div>;
+}
+
+function NextQuestion(props) {
+  function handleNextQuestion() {}
+  return <button onclick={handleNextQuestion}>Next</button>;
 }
 
 export default App;
